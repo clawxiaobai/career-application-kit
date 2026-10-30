@@ -2,8 +2,12 @@
 % DEMO-CONTENT: 下面的单位、学校、项目和数字都是示例，不是真实经历。
 % 换成你自己的内容后，删除本行 DEMO-CONTENT 注释，build 才会放行。
 \documentclass[UTF8,a4paper,10pt,fontset=none]{ctexart}
-\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}[BoldFont={Microsoft YaHei Bold}]}{\setCJKmainfont{FandolSong-Regular}[BoldFont={FandolSong-Bold}]}
-\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{TeX Gyre Heros}}
+\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}[BoldFont={Microsoft YaHei Bold}]}{%
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKmainfont{Noto Sans CJK SC}}{%
+\IfFontExistsTF{Source Han Sans SC}{\setCJKmainfont{Source Han Sans SC}}{%
+\setCJKmainfont{FandolSong-Regular}[BoldFont={FandolSong-Bold}]}}}
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{%
+\IfFontExistsTF{TeX Gyre Heros}{\setmainfont{TeX Gyre Heros}}{\setmainfont{Latin Modern Roman}}}
 \usepackage[left=16mm,right=16mm,top=13mm,bottom=13mm]{geometry}
 \usepackage{graphicx,xcolor,enumitem}
 \usepackage[hidelinks]{hyperref}

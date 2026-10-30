@@ -5,8 +5,12 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{fontspec,geometry,xcolor,hyperref}
 \usepackage{xeCJK}
-\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}}{\setCJKmainfont{FandolSong-Regular}}
-\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{TeX Gyre Heros}}
+\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}}{%
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKmainfont{Noto Sans CJK SC}}{%
+\IfFontExistsTF{Source Han Sans SC}{\setCJKmainfont{Source Han Sans SC}}{%
+\setCJKmainfont{FandolSong-Regular}}}}
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{%
+\IfFontExistsTF{TeX Gyre Heros}{\setmainfont{TeX Gyre Heros}}{\setmainfont{Latin Modern Roman}}}
 \geometry{left=22mm,right=22mm,top=22mm,bottom=22mm}
 \definecolor{accent}{HTML}{225B78}
 \hypersetup{hidelinks}

@@ -4,8 +4,12 @@
 \documentclass{resume}
 \usepackage{graphicx,xcolor,fancyhdr}
 \usepackage{xeCJK}
-\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}}{\setCJKmainfont{FandolSong-Regular}}
-\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{TeX Gyre Heros}}
+\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}}{%
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKmainfont{Noto Sans CJK SC}}{%
+\IfFontExistsTF{Source Han Sans SC}{\setCJKmainfont{Source Han Sans SC}}{%
+\setCJKmainfont{FandolSong-Regular}}}}
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{%
+\IfFontExistsTF{TeX Gyre Heros}{\setmainfont{TeX Gyre Heros}}{\setmainfont{Latin Modern Roman}}}
 \definecolor{accent}{HTML}{225B78}
 \geometry{left=16mm,right=16mm,top=12mm,bottom=15mm}
 \titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\titlerule]

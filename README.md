@@ -83,8 +83,8 @@ Windows 下若 `python` 不在 PATH，用 `py -3` 代替。
 | 所有脚本 | Python 3.10+ | 只用标准库 |
 | 生成 PDF | XeLaTeX（TeX Live / MacTeX） | 需要 `ctex`、`fontspec`、`geometry`、`graphicx`、`xcolor`、`enumitem`、`hyperref`、`titlesec`、`fancyhdr`、`xifthen` |
 | 页数与预览 | Poppler：`pdfinfo`、`pdftotext`、`pdftoppm` | 需在 PATH 中 |
-| 中文字体 | 优先微软雅黑，缺失时回退 Fandol 宋体 | 不捆绑商业字体 |
-| 英文字体 | 优先 Arial，缺失时回退 TeX Gyre Heros | 换字体会改变排版，需重新目检 |
+| 中文字体 | 自动回退：微软雅黑 → Noto Sans CJK SC → 思源黑体 → Fandol 宋体 | 不捆绑商业字体 |
+| 英文字体 | 自动回退：Arial → TeX Gyre Heros → Latin Modern | 换字体会改变排版，需重新目检 |
 | 投递 | agent 的浏览器/连接器，或你本人 | 脚本本身不投递 |
 
 `doctor` 会把缺失的依赖直接列出来，不会自动联网安装。
