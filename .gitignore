@@ -1,0 +1,41 @@
+# 个人数据 —— 不要提交
+data/*
+!data/.gitkeep
+
+# 生成物
+output/*
+!output/.gitkeep
+manifest.json
+*.zip
+previews/
+
+# 编译中间产物
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# 凭证类，永不入库
+.env
+.profile
+Cookies
+"Login Data"
+*.pem
+*.key

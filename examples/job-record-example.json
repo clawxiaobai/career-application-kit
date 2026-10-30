@@ -1,0 +1,16 @@
+{
+  "key": "official-portal:example-co:REQ123",
+  "at": "2026-03-01T03:00:00Z",
+  "company": "示例科技有限公司",
+  "title": "结构设计工程师",
+  "location": "上海",
+  "salary": "15-20K·14薪",
+  "source": "https://example.com/careers/REQ123",
+  "channel": "official_careers_portal",
+  "actionType": "new_application",
+  "status": "success",
+  "resumePath": "output/jobs/example-co-structural/main.pdf",
+  "proof": "output/jobs/example-co-structural/submitted.png",
+  "portalStatus": "Application Submitted",
+  "notes": "示例记录：真实使用前请替换为本次实际岗位与凭证"
+}

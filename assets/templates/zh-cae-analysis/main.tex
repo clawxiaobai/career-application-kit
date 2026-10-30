@@ -1,0 +1,76 @@
+% !TeX program = xelatex
+% DEMO-CONTENT: 下面的单位、学校、项目和数字都是示例，不是真实经历。
+% 换成你自己的内容后，删除本行 DEMO-CONTENT 注释，build 才会放行。
+\documentclass[UTF8,a4paper,10pt,fontset=none]{ctexart}
+\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}[BoldFont={Microsoft YaHei Bold}]}{\setCJKmainfont{FandolSong-Regular}[BoldFont={FandolSong-Bold}]}
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{TeX Gyre Heros}}
+\usepackage[left=16mm,right=16mm,top=13mm,bottom=13mm]{geometry}
+\usepackage{graphicx,xcolor,enumitem}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{HTML}{225B78}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.1em,label=\textbullet,topsep=1pt,itemsep=1pt,parsep=0pt}
+\newcommand{\resumeSection}[1]{\par\vspace{7pt}{\fontsize{12}{15}\selectfont\bfseries\color{accent} #1}\par\vspace{2pt}{\color{accent}\hrule height 0.35pt}\vspace{4pt}}
+\newcommand{\entry}[2]{\par\vspace{3pt}\noindent\textbf{#1}\hfill{\fontsize{9}{12}\selectfont #2}\par\nopagebreak}
+\begin{document}
+\linespread{1.0}
+\fontsize{10.3}{14.5}\selectfont
+\begin{minipage}[c]{0.83\linewidth}
+{\fontsize{25}{29}\selectfont\bfseries {{NAME}}}\par\vspace{5pt}
+{\color{accent}\bfseries 求职意向：{{ROLE}}}\par\vspace{4pt}
+手机：{{PHONE}}\quad 邮箱：\href{mailto:{{EMAIL}}}{{{EMAIL}}}\par
+意向城市：{{CITY}}\quad {{DEGREE}}\quad {{EXTRA}}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.14\linewidth}
+\includegraphics[width=\linewidth]{images/photo.png}
+\end{minipage}\par
+\resumeSection{教育背景}
+\entry{示例大学｜机械工程 硕士}{2023.09 - 2026.06（预计）}
+\begin{itemize}
+\item 研究方向：有限元方法与结构仿真；涉及前处理、网格质量与非线性分析。
+\end{itemize}
+\entry{示例工业大学｜机械工程 本科}{2019.09 - 2023.06}
+\begin{itemize}
+\item 主修材料力学、弹性力学、有限元基础、机械设计。
+\end{itemize}
+\resumeSection{个人概述}
+机械工程硕士，聚焦结构仿真与数值方法，具备前处理、网格划分与结果分析实践。熟悉 Abaqus、ANSYS 等通用求解器的建模流程，具有 Python 脚本化建模与数据处理能力，参与过求解流程与接触算法的研究性实现。
+\resumeSection{核心技能}
+\textbf{仿真分析：}Abaqus、ANSYS、DEFORM；静力、模态与显式动力学分析流程；结果判读与误差检查。\par
+\textbf{前处理与网格：}几何清理、网格划分与质量检查；网格收敛性验证。\par
+\textbf{建模与编程：}SolidWorks、UG/NX、Creo；Python、C++ 脚本化建模与后处理。\par
+\textbf{数据方法：}PyTorch；仿真数据构建、训练与评估。
+\resumeSection{实习与研发经历}
+\entry{某装备制造企业｜CAE 分析实习生}{2025.07 - 2025.10}
+\begin{itemize}
+\item \textbf{建模分析：}承担零部件静力学与模态分析建模，完成网格划分、边界条件设置与结果判读。
+\item \textbf{方案对比：}对多组结构方案进行仿真对比，输出分析结论供设计迭代参考。
+\item \textbf{流程改进：}使用 Python 脚本批量处理模型与结果数据，减少重复操作。
+\end{itemize}
+\entry{某医疗器械公司｜机械设计助理实习生}{2022.04 - 2022.06}
+\begin{itemize}
+\item 协助完成产品结构建模与图纸输出，参与尺寸链与装配可行性核对。
+\end{itemize}
+\resumeSection{项目与科研实践}
+\entry{结构仿真与求解流程研究}{硕士阶段}
+\begin{itemize}
+\item \textbf{前处理：}围绕几何清理与网格划分流程开展研究，关注网格质量对结果的影响。
+\item \textbf{求解与接触：}参与显式动力学求解流程与接触算法相关实现与验证。
+\end{itemize}
+\entry{仿真代理模型研究｜Python / PyTorch}{硕士阶段}
+\begin{itemize}
+\item \textbf{研究任务：}针对仿真计算成本高的问题，探索以深度学习近似数值结果。
+\item \textbf{数据与评估：}负责仿真数据构建、模型训练与误差评估，分析适用边界。
+\end{itemize}
+\entry{零件静强度与模态分析｜课程项目}{2022.09 - 2022.12}
+\begin{itemize}
+\item 完成典型零件静强度与自由模态分析，开展网格收敛性验证与结果对比。
+\item 依据分析结论提出结构改进方案，并复核改进后的应力分布。
+\end{itemize}
+\resumeSection{竞赛与荣誉}
+省级力学竞赛｜二等奖（示例）。\par
+校级科技竞赛｜一等奖（示例）。\par
+校级奖学金；CET-4。
+\end{document}

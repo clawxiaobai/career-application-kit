@@ -1,0 +1,4 @@
+interface:
+  display_name: "求职工作区 (career-application-kit)"
+  short_description: "本地事实档案 + 岗位核查 + 一页简历定制 + 去重投递台账"
+  default_prompt: "使用 $career-application-kit：先运行 doctor 与 validate，读取 data/preferences.json 与 data/profile.md，告诉我档案还缺哪些待确认信息，并按我的城市与薪资边界继续核查岗位、准备材料。"

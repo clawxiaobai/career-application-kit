@@ -1,0 +1,79 @@
+% !TeX program = xelatex
+% DEMO-CONTENT: 下面的单位、学校、项目和数字都是示例，不是真实经历。
+% 换成你自己的内容后，删除本行 DEMO-CONTENT 注释，build 才会放行。
+\documentclass[UTF8,a4paper,10pt,fontset=none]{ctexart}
+\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}[BoldFont={Microsoft YaHei Bold}]}{\setCJKmainfont{FandolSong-Regular}[BoldFont={FandolSong-Bold}]}
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{TeX Gyre Heros}}
+\usepackage[left=16mm,right=16mm,top=13mm,bottom=13mm]{geometry}
+\usepackage{graphicx,xcolor,enumitem}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{HTML}{225B78}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.1em,label=\textbullet,topsep=1pt,itemsep=1pt,parsep=0pt}
+\newcommand{\resumeSection}[1]{\par\vspace{7pt}{\fontsize{12}{15}\selectfont\bfseries\color{accent} #1}\par\vspace{2pt}{\color{accent}\hrule height 0.35pt}\vspace{4pt}}
+\newcommand{\entry}[2]{\par\vspace{3pt}\noindent\textbf{#1}\hfill{\fontsize{9}{12}\selectfont #2}\par\nopagebreak}
+\begin{document}
+\linespread{1.0}
+\fontsize{10.3}{14.5}\selectfont
+\begin{minipage}[c]{0.83\linewidth}
+{\fontsize{25}{29}\selectfont\bfseries {{NAME}}}\par\vspace{5pt}
+{\color{accent}\bfseries 求职意向：{{ROLE}}}\par\vspace{4pt}
+手机：{{PHONE}}\quad 邮箱：\href{mailto:{{EMAIL}}}{{{EMAIL}}}\par
+意向城市：{{CITY}}\quad {{DEGREE}}\quad {{EXTRA}}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.14\linewidth}
+\includegraphics[width=\linewidth]{images/photo.png}
+\end{minipage}\par
+\resumeSection{教育背景}
+\entry{示例大学｜机械工程 硕士}{2023.09 - 2026.06（预计）}
+\begin{itemize}
+\item 研究方向：CAE 软件与数值仿真；涉及有限元前处理、显式动力学与仿真代理模型。
+\end{itemize}
+\entry{示例工业大学｜机械工程 本科}{2019.09 - 2023.06}
+\begin{itemize}
+\item 主修机械设计、数值计算方法、程序设计基础。
+\end{itemize}
+\resumeSection{个人概述}
+机械工程硕士，具有 CAE 研究与 CAD 软件开发交叉经历。实习期间参与三维 CAD 软件功能开发、调试与缺陷修复；个人项目基于 C++、Qt 与几何内核实现参数化建模原型；硕士阶段开展有限元前处理与仿真代理模型研究。
+\resumeSection{核心技能}
+\textbf{数值仿真：}有限元法基础；Abaqus、ANSYS；CAE 前处理与网格处理。\par
+\textbf{编程与调试：}C++、Python；Qt 桌面应用；Git、CMake；单元测试与调试工具。\par
+\textbf{数据与算法：}PyTorch；仿真数据构建、模型训练与结果评估。\par
+\textbf{CAD 与工程：}几何内核（如 OCCT）、约束求解器；SolidWorks、UG/NX、Creo。
+\resumeSection{实习与研发经历}
+\entry{某工业软件公司｜研发实习生（C++）}{2025.07 - 2025.10}
+\begin{itemize}
+\item \textbf{功能开发：}参与三维 CAD 软件模块开发，完成 C++ 编码、调试与功能验证。
+\item \textbf{问题定位：}排查建模与交互相关问题，修复缺陷并回归验证修改结果。
+\item \textbf{工程实践：}使用版本管理与构建工具参与日常开发流程，编写测试用例辅助验证。
+\end{itemize}
+\entry{某医疗器械公司｜机械设计助理实习生}{2022.04 - 2022.06}
+\begin{itemize}
+\item 协助完成产品结构建模与图纸输出，使用 AutoCAD、Creo、SolidWorks 辅助设计。
+\end{itemize}
+\resumeSection{项目与科研实践}
+\entry{个人参数化三维 CAD 原型｜C++ / Qt / 几何内核}{2025.05 - 2025.08}
+\begin{itemize}
+\item \textbf{功能实现：}实现基础草图、几何与尺寸约束、特征创建、布尔运算及特征树管理。
+\item \textbf{集成调试：}完成几何内核选型、代码集成与调试，排查建模与界面状态问题。
+\end{itemize}
+\entry{有限元前处理与求解器研究}{硕士阶段}
+\begin{itemize}
+\item 围绕前处理与网格处理开展研究，参与显式动力学求解流程与接触算法相关实现。
+\end{itemize}
+\entry{仿真代理模型研究｜Python / PyTorch}{硕士阶段}
+\begin{itemize}
+\item 针对仿真计算效率问题，探索以深度学习近似数值结果；负责数据构建、训练与评估。
+\end{itemize}
+\entry{网格检查脚本工具｜Python}{2024.10 - 2025.01}
+\begin{itemize}
+\item 编写批量网格质量检查与几何清理脚本，输出问题单元定位报告，减少重复手工操作。
+\item 支持多算例批处理，配合求解流程做前置校验。
+\end{itemize}
+\resumeSection{竞赛与荣誉}
+省级工业软件竞赛｜三等奖（示例）。\par
+校级科技竞赛｜一等奖（示例）。\par
+校级奖学金；CET-4。
+\end{document}

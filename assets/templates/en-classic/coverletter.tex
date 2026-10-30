@@ -1,0 +1,42 @@
+% !TeX program = xelatex
+% DEMO-CONTENT: this letter is a structural example, not a sendable letter.
+% Fill {{COMPANY}} / {{TITLE}} / {{REQ}}, rewrite the body with your own facts,
+% then delete the DEMO-CONTENT comment.
+\documentclass[a4paper,11pt]{article}
+\usepackage{fontspec,geometry,xcolor,hyperref}
+\usepackage{xeCJK}
+\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}}{\setCJKmainfont{FandolSong-Regular}}
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{TeX Gyre Heros}}
+\geometry{left=22mm,right=22mm,top=22mm,bottom=22mm}
+\definecolor{accent}{HTML}{225B78}
+\hypersetup{hidelinks}
+\setlength{\parindent}{0pt}\setlength{\parskip}{12pt}
+\pagestyle{empty}
+\begin{document}
+{\LARGE\bfseries {{NAME}}}\par
+{{EMAIL}} | {{PHONE}}\par
+{{DATE}}
+\par
+{\large\bfseries\color{accent}Application: {{TITLE}}{{REQ}}}\par
+{{COMPANY}} Hiring Team,
+\par
+I am writing to apply for the {{TITLE}} position. I am completing a master's degree in Mechanical
+Engineering and my background in structural design, simulation and engineering scripting matches the
+requirements described in the posting.
+\par
+In my most recent internship I worked on frame and transmission design: 3D modelling, drawings, and
+design revisions driven by assembly and manufacturing constraints. I also supported prototype assembly,
+where I logged interference issues and verified fixes on the physical build. That work taught me to keep
+design decisions traceable to a requirement rather than to a preference.
+\par
+Alongside design work I use simulation as a checking tool rather than a decoration: static and modal
+analysis with mesh quality checks, plus Python scripts for repetitive pre- and post-processing. I am
+careful to state what the models can and cannot support.
+\par
+I would welcome the chance to discuss how this experience fits your team's current work.
+\par
+Thank you for your consideration.
+\par
+Sincerely,\par
+{{NAME}}
+\end{document}

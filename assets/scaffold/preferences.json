@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "updated": "{{DATE}}",
+  "candidate": {
+    "name": "{{NAME}}",
+    "phone": "{{PHONE}}",
+    "email": "{{EMAIL}}",
+    "wechat": "",
+    "github": "",
+    "homepage": ""
+  },
+  "target": {
+    "role": "{{ROLE}}",
+    "locations": ["{{CITY}}"],
+    "degree": "{{DEGREE}}",
+    "extra": "{{EXTRA}}"
+  },
+  "screening": {
+    "minPublishedMonthlySalaryLowerBoundCny": 10000,
+    "allowNegotiableOrUndisclosedSalary": true,
+    "salaryUnknownLabel": "薪资待核实，不推定达标",
+    "employmentTypes": ["应届", "经验不限"],
+    "allowFewHighlyMatchedOutsideRegions": true,
+    "excludeEmployers": [],
+    "priorities": ["真实岗位匹配", "直签", "福利与待遇明确", "成长与培养"]
+  },
+  "resume": {
+    "pages": 1,
+    "keepPhoto": true,
+    "tailorPerRole": true,
+    "renderAndInspectAllPages": true
+  },
+  "campaign": {
+    "target": null,
+    "completed": 0
+  },
+  "unknownFields": [
+    "最早到岗日期",
+    "现住址",
+    "工作资格或签证事实",
+    "薪资承诺"
+  ],
+  "authorization": "本文件是筛选与排版偏好，不构成对任何协议、提交动作或新任务的授权"
+}

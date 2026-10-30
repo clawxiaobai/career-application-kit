@@ -1,0 +1,54 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit-tests:
+    name: unit tests (py${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Run kit tests
+        working-directory: scripts
+        run: python test_kit.py -v
+
+  templates:
+    name: compile ${{ matrix.template }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        template: [zh-mechanical, zh-cadcae, zh-cae-analysis, en-classic]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-lang-chinese texlive-latex-extra \
+            texlive-fonts-recommended poppler-utils
+      - name: Compile (demo content is allowed here on purpose)
+        working-directory: assets/templates/${{ matrix.template }}
+        run: |
+          set -e
+          for f in *.tex; do
+            xelatex -no-shell-escape -interaction=nonstopmode -halt-on-error "$f"
+            xelatex -no-shell-escape -interaction=nonstopmode -halt-on-error "$f"
+          done
+          for f in *.pdf; do
+            pages=$(pdfinfo "$f" | awk '/^Pages:/ {print $2}')
+            echo "$f -> $pages page(s)"
+            test "$pages" = "1"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.template }}-pdf
+          path: assets/templates/${{ matrix.template }}/*.pdf

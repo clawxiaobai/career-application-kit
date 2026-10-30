@@ -1,0 +1,77 @@
+% !TeX program = xelatex
+% DEMO-CONTENT: 下面的单位、学校、项目和数字都是示例，不是真实经历。
+% 换成你自己的内容后，删除本行 DEMO-CONTENT 注释，build 才会放行。
+\documentclass[UTF8,a4paper,10pt,fontset=none]{ctexart}
+\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}[BoldFont={Microsoft YaHei Bold}]}{\setCJKmainfont{FandolSong-Regular}[BoldFont={FandolSong-Bold}]}
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{TeX Gyre Heros}}
+\usepackage[left=16mm,right=16mm,top=13mm,bottom=13mm]{geometry}
+\usepackage{graphicx,xcolor,enumitem}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{HTML}{225B78}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.1em,label=\textbullet,topsep=1pt,itemsep=1pt,parsep=0pt}
+\newcommand{\resumeSection}[1]{\par\vspace{7pt}{\fontsize{12}{15}\selectfont\bfseries\color{accent} #1}\par\vspace{2pt}{\color{accent}\hrule height 0.35pt}\vspace{4pt}}
+\newcommand{\entry}[2]{\par\vspace{3pt}\noindent\textbf{#1}\hfill{\fontsize{9}{12}\selectfont #2}\par\nopagebreak}
+\begin{document}
+\linespread{1.0}
+\fontsize{10.3}{14.5}\selectfont
+\begin{minipage}[c]{0.83\linewidth}
+{\fontsize{25}{29}\selectfont\bfseries {{NAME}}}\par\vspace{5pt}
+{\color{accent}\bfseries 求职意向：{{ROLE}}}\par\vspace{4pt}
+手机：{{PHONE}}\quad 邮箱：\href{mailto:{{EMAIL}}}{{{EMAIL}}}\par
+意向城市：{{CITY}}\quad {{DEGREE}}\quad {{EXTRA}}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.14\linewidth}
+\includegraphics[width=\linewidth]{images/photo.png}
+\end{minipage}\par
+\resumeSection{教育背景}
+\entry{示例大学｜机械工程 硕士}{2023.09 - 2026.06（预计）}
+\begin{itemize}
+\item 研究方向：结构设计与动力学仿真；主修有限元法、机械振动、优化设计。
+\end{itemize}
+\entry{示例工业大学｜机械工程 本科}{2019.09 - 2023.06}
+\begin{itemize}
+\item 主修机械原理与设计、工程制图、机电传动控制、工程测量。
+\end{itemize}
+\resumeSection{个人概述}
+机械工程本硕背景，具备结构方案设计、三维建模、工程图绘制与样机调试实践。曾负责作业机器人结构与电控设计、搬运小车整车结构设计，参与样机制作与迭代优化；具有医疗器械结构设计辅助经历。
+\resumeSection{核心技能}
+\textbf{结构设计：}SolidWorks、Creo、UG/NX、AutoCAD；结构方案、三维建模、工程图绘制。\par
+\textbf{样机与机电：}样机制作、装配调试与结构迭代；电控方案配合、电机选型与驱动调试基础。\par
+\textbf{工程分析：}Abaqus、ANSYS；静力学与模态分析基础；Python 数据处理与脚本化建模。\par
+\resumeSection{实习与研发经历}
+\entry{某装备制造企业｜结构设计实习生}{2025.07 - 2025.09}
+\begin{itemize}
+\item 参与设备机架与传动部件结构设计，完成三维建模与工程图绘制，配合工艺与装配要求修改方案。
+\item 参与样机装配与调试，根据现场反馈迭代结构与连接方式，记录并解决装配干涉问题。
+\end{itemize}
+\entry{某医疗器械公司｜机械设计助理实习生}{2022.04 - 2022.06}
+\begin{itemize}
+\item 协助工程师完成产品外壳与内部支撑结构建模，参与结构优化与尺寸链核对。
+\item 使用 AutoCAD、Creo、SolidWorks 输出设计图纸，配合完成样件试装。
+\end{itemize}
+\resumeSection{项目经历}
+\entry{自动化作业机器人｜机械结构 + 电控}{2024.03 - 2024.11}
+\textbf{项目成果：}省级竞赛一等奖（示例）。\par
+\begin{itemize}
+\item 负责机器人本体与执行机构结构设计，完成三维建模、工程图与关键件选型。
+\item 参与电控方案设计与机电联调，配合完成样机制作与作业流程验证。
+\end{itemize}
+\entry{物流搬运小车｜整车结构}{2023.03 - 2023.08}
+\begin{itemize}
+\item 负责整车底盘与载货结构设计，围绕搬运任务确定布局、传动与承重方案。
+\item 参与快速样机制作与调试，依据测试结果迭代结构细节。
+\end{itemize}
+\entry{减速器结构设计与强度校核｜课程设计}{2022.09 - 2022.12}
+\begin{itemize}
+\item 完成两级圆柱齿轮减速器结构设计，输出装配图与零件图，进行轴强度与轴承寿命校核。
+\item 依据装配与加工要求调整箱体结构，核对尺寸链与配合公差。
+\end{itemize}
+\resumeSection{竞赛与荣誉}
+省级机械创新设计竞赛｜一等奖（示例）。\par
+校级结构设计竞赛｜二等奖（示例）。\par
+校级科技竞赛｜二等奖（示例）。\par
+校级奖学金；CET-4。
+\end{document}
